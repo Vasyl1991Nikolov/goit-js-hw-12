@@ -57,8 +57,10 @@ searchForm.addEventListener('submit', async (event) => {
             loadMoreBtn.style.display = 'none'; // Сховати кнопку "Load more"
             const endMessage = document.createElement('p');
             endMessage.textContent = "We're sorry, but you've reached the end of search results.";
+            endMessage.classList.add('end-message'); 
             endMessage.style.textAlign = 'center'; // Вирівнюємо текст по центру
             galleryContainer.appendChild(endMessage); // Додаємо повідомлення до галереї
+            
         }
     } catch (error) {
         iziToast.error({
@@ -88,6 +90,7 @@ loadMoreBtn.addEventListener('click', async () => {
             loadMoreBtn.style.display = 'none'; // Сховати кнопку "Load more"
             const endMessage = document.createElement('p');
             endMessage.textContent = "We're sorry, but you've reached the end of search results.";
+            endMessage.classList.add('end-message');  // Додаємо новий клас
             endMessage.style.textAlign = 'center'; // Вирівнюємо текст по центру
             galleryContainer.appendChild(endMessage); // Додаємо повідомлення до галереї
         }
